@@ -43,8 +43,8 @@ C     Nr  :: No. points in Z for full process domain.
       PARAMETER (
      &           sNx =  54,
      &           sNy =  54,
-     &           OLx =   8,
-     &           OLy =   8,
+     &           OLx =   4,
+     &           OLy =   4,
      &           nSx =   1,
      &           nSy =   1,
      &           nPx = 5200-1688,
