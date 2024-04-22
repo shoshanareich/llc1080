@@ -81,8 +81,9 @@
 
 # Time stepping parameters
  &PARM03
- nIter0=354240,
- endtime=63072000.,
+ nIter0=0,
+# endtime=63072000.,
+ nTimeSteps = 40320.,
  deltaT = 90.,
  abEps = 0.1,
  forcing_In_AB=.FALSE.,
@@ -119,6 +120,11 @@
 # Input datasets
  &PARM05
  bathyFile      ='bathy1080_g5_r4',
- hydrogThetaFile='Jan2010_THETA_1080x14040x90_r4',
- hydrogSaltFile ='Jan2010_SALT_1080x14040x90_r4',
+# hydrogThetaFile='Jan2010_THETA_1080x14040x90_r4',
+# hydrogSaltFile ='Jan2010_SALT_1080x14040x90_r4',
+ hydrogThetaFile = 'Theta.0000703680.data',
+ hydrogSaltFile = 'Salt.0000703680.data',
+ uVelInitFile = 'U.0000703680.data',
+ vVelInitFile = 'V.0000703680.data',
+ pSurfInitFile = 'Eta.0000703680.data',
  /

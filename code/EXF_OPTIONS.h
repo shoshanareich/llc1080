@@ -187,7 +187,7 @@ C        be defined but ALLOW_BULKFORMULAE needs to be undef
 C-  Other forcing fields
 #define ALLOW_RUNOFF
 #undef  ALLOW_RUNOFTEMP
-#undef  ALLOW_SALTFLX
+#undef ALLOW_SALTFLX
 
 #if (defined (ALLOW_BULKFORMULAE) && defined (ATMOSPHERIC_LOADING))
 C Note: To use EXF_CALC_ATMRHO, both ALLOW_BULKFORMULAE
@@ -197,7 +197,7 @@ C       and ATMOSPHERIC_LOADING need to be defined
 
 C-  Zenith Angle/Albedo related flags.
 #ifdef ALLOW_DOWNWARD_RADIATION
-# undef ALLOW_ZENITHANGLE
+# define ALLOW_ZENITHANGLE
 #endif
 
 C-  Use ocean_emissivity*lwdown in lwFlux. This flag should be defined
