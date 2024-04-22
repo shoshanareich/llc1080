@@ -6,9 +6,9 @@ module load comp-intel mpi-hpe/mpt hdf4/4.2.12 hdf5/1.8.18_mpt netcdf/4.4.1.1_mp
 mkdir build
 cd build
 cp ../code/SIZE.h_snxxsnyxnprocs SIZE.h
-../../MITgcm/tools/genmake2 -of=/home3/sreich/llc_hires/llc_1080/code/linux_amd64_ifort+mpi_ice_nas -mpi -mods=../code -rd=../../MITgcm
-make depend
-make -j 4
+../../MITgcm/tools/genmake2 -of=/home3/sreich/llc_hires/llc_1080/code/linux_amd64_ifort+mpi_ice_nas -mpi -mods=../code -rd=../../MITgcm  
+make depend  
+make -j 4  
 mv mitgcmuv mitgcmuv_snxxsnyxnprocs
 
 mkdir run  
