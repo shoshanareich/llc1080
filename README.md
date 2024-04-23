@@ -3,8 +3,8 @@
 qsub -I -q devel -l select=19:ncpus=20:model=ivy,walltime=2:00:00 -m abe
 module load comp-intel mpi-hpe/mpt hdf4/4.2.12 hdf5/1.8.18_mpt netcdf/4.4.1.1_mpt
 
-mkdir build
-cd build
+mkdir build  
+cd build  
 cp ../code/SIZE.h_snxxsnyxnprocs SIZE.h
 ../../MITgcm/tools/genmake2 -of=/home3/sreich/llc_hires/llc_1080/code/linux_amd64_ifort+mpi_ice_nas -mpi -mods=../code -rd=../../MITgcm  
 make depend  
