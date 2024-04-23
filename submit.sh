@@ -1,10 +1,10 @@
 #!/bin/bash
 #PBS -q normal
 #PBS -N mitgcm
-#PBS -l select=68:ncpus=20:model=ivy
+#PBS -l select=176:ncpus=20:model=ivy
 #PBS -l walltime=8:00:00
-#PBS -o llc1080.%j.out
-#PBS -e llc1080.%j.err
+#PBS -o llc1080.out
+#PBS -e llc1080.err
 
 #--- 0.load modules ------
 #ulimit -s unlimited
@@ -24,9 +24,9 @@ ulimit -u hard
 #---- 1.set variables ------
 #note for bash: can not have any space around =
 
-nprocs=1342
-snx=90
-sny=90
+nprocs=3512
+snx=54
+sny=54
 #pickupts1="0001051920"
 extpickup=
 forwadj=
@@ -45,7 +45,7 @@ codedir=$basedir/code${whichcode}
 builddir=$basedir/build${whichcode}_${snx}x${sny}x${nprocs}
 inputdir=$basedir/input${whichcode}
 
-workdir=$scratchdir/run${whichcode}
+workdir=$scratchdir/run${whichcode}_${snx}x${sny}x${nprocs}
 
 mkdir $workdir
 cd $workdir
@@ -90,6 +90,9 @@ cp -f ${builddir}/Makefile ./
 #    cp -f ${pickupdir}/pickup${extpickup}.${pickupts1}.data ./pickup.${pickupts1}.data
 #    cp -f ${pickupdir}/pickup${extpickup}.${pickupts1}.meta ./pickup.${pickupts1}.meta
 #  fi
+
+mkdir -p $workdir/diags/state_avg_2d
+mkdir -p $workdir/diags/state_avg_3d
 
 #--- 9. make a list of all linked files ------
 
