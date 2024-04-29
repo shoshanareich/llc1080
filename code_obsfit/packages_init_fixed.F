@@ -118,7 +118,7 @@ C       |-- OASIS_INIT_FIXED
 C       |
 C       |-- EMBED_FILES_INIT
 C       |
-C       |-- TIDES_FILES_INIT
+C       |-- TIDES_INIT_FIXED
 C       |
 C       |-- MYPACKAGE_INIT_FIXED
 C       |
